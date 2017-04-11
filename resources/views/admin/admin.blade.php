@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TTĐH</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/admin/admin.css">
+	<title>Business Operations Center</title>
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/admin/admin.css')}}">
 </head>
 <body>
 <div class="container">
@@ -11,7 +11,7 @@
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		     <a class="navbar-brand" href="#">TRUNG TÂM ĐIỀU HÀNH KINH DOANH</a>
+		     <a class="navbar-brand" href="#">Business Operations Center</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -20,7 +20,7 @@
 		      	<li><a href="#">Lịch trực online</a></li>
 		        <li><a href="#">Thông báo</a></li>
 		        <li><a href="#">Kế hoạch kinh doanh</a></li>
-		        <li><a href="#">Thông báo</a></li>
+		        <li><a href="#">Thông tin nhân viên</a></li>
 		        <li><a href="#">Đăng xuất</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -51,7 +51,7 @@
 			</ul>
 			<label>KHO HÀNG</label>
 			<ul>
-			  <li><a href="#">Catalog</a></li>
+			  <li><a href="{{URL::to('admin/catalog')}}">Catalog</a></li>
 			  <li><a href="#">Producer</a></li>
 			  <li><a href="#">Product</a></li>
 			  <li><a href="#">Sản phẩm khuyến mãi</a> </li>
@@ -66,7 +66,7 @@
 		</div>
 	</div>
 	<div id="c_content">
-	    noi dung
+	    @yield('content_admin')
 	</div>
 	<div id="c_quangcao">
 	     <div id="c_quangcao_content">

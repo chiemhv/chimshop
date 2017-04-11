@@ -29,7 +29,11 @@ Route::group(['prefix'=>'admin'], function(){
 		return view('admin.admin');
 	});
 	//-- Tạo Catalog
-
+	Route::group(['prefix'=>'catalog'], function(){
+		Route::get('', 'CatalogCtrl@index')->name('admin.catalog');
+	    Route::get('create', 'CatalogCtrl@create');
+	    Route::post('store', 'CatalogCtrl@store');
+	});
 	//-- Tao Producer 
 
 

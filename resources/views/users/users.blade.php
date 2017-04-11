@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ABC.COM</title>
+	<title>chimshop</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
@@ -11,28 +11,16 @@
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		     <a class="navbar-brand" href="#">abc.com</a>
+		     <a class="navbar-brand" href="#">chimshop</a>
+		     <a class="navbar-brand" href="#">HaiVl</a>
+		     <a class="navbar-brand" href="#">Game</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
-		      <ul class="nav navbar-nav" id="menu_bar">
-		        <li class="dropdown">
-		          <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">One more separated link</a></li>
-		          </ul>
-		        </li>
-		      </ul>
-
 		      <form class="navbar-form navbar-left">
 		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Nhập sản phẩm tìm kiếm .." size="60%">
+		          <input type="text" class="form-control" placeholder="Nhập sản phẩm tìm kiếm .." size="50%">
 		        </div>
 		        <button type="submit" class="btn btn-default">Tìm SP</button>
 		      </form>
@@ -59,10 +47,10 @@
 			</ul>
 			<label>KHÁM PHÁ</label>
 			<ul>
-			  <li><a href="#">Đồ công nghệ</a></li>
-			  <li><a href="#">Mỹ Phẩm & Nước Hoa</a></li>
-			  <li><a href="#">Đồng hồ & Phụ kiện</a></li>
-			  <li><a href="#">Thời Trang</a></li>
+			  <li><a href="#">Tai nghe & phụ kiện</a></li>
+			  <li><a href="#">Mỹ Phẩm </a></li>
+			  <li><a href="#">Nước hoa</a></li>
+			  <li><a href="#">Dược phẩm</a></li>
 			</ul>
 		</div>
 	</div>
