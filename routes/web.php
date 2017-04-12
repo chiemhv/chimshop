@@ -28,15 +28,44 @@ Route::group(['prefix'=>'admin'], function(){
 	Route::get('/', function(){
 		return view('admin.admin');
 	});
-	//-- Tạo Catalog
-	Route::group(['prefix'=>'catalog'], function(){
-		Route::get('', 'CatalogCtrl@index')->name('admin.catalog');
-	    Route::get('create', 'CatalogCtrl@create');
-	    Route::post('store', 'CatalogCtrl@store');
-	});
-	//-- Tao Producer 
-
-
-	//-- Tao Product
+	//==================== KHO HÀNG ==========================
+			//-- TẠO FX -- TẦNG BÁN HÀNG, NHÓM BÁN HÀNG 
+			Route::group(['prefix'=>'fx'], function(){
+				Route::get('', 'FxCtrl@index');
+				Route::get('create', 'FxCtrl@create');
+				Route::post('store', 'FxCtrl@store');
+				Route::get('edit', 'FxCtrl@edit');
+				Route::post('update', 'FxCtrl@update');
+				Route::get('destroy', 'FxCtrl@destroy');
+			});
+			//-- Tạo Catalog
+			Route::group(['prefix'=>'catalog'], function(){
+				Route::get('', 'CatalogCtrl@index')->name('admin.catalog');
+			    Route::get('create', 'CatalogCtrl@create');
+			    Route::post('store', 'CatalogCtrl@store');
+			    Route::get('edit', 'CatalogCtrl@edit');
+			    Route::post('update', 'CatalogCtrl@update');
+			    Route::get('destroy', 'CatalogCtrl@destroy');
+			});
+			//--- NHÀ SẢN XUẤT PRODUCER
+			Route::group(['prefix'=>'producer'], function(){
+				Route::get('', 'ProducerCtrl@index');
+				Route::get('create', 'ProducerCtrl@create');
+				Route::post('store', 'ProducerCtrl@store');
+				Route::get('edit', 'ProducerCtrl@edit');
+				Route::post('update', 'ProducerCtrl@update');
+				Route::get('destroy', 'ProducerCtrl@destroy');
+			});
+			//-- SẢN  PHẨM PRODUCT
+			Route::group(['prefix'=>'product'], function(){
+				Route::get('', 'ProductCtrl@index');
+				Route::get('create', 'ProductCtrl@create');
+				Route::post('store', 'ProductCtrl@store');
+				Route::get('edit', 'ProductCtrl@edit');
+				Route::post('update', 'ProductCtrl@update');
+				Route::get('destroy', 'ProductCtrl@destroy');
+				Route::get('sale', 'ProductCtrl@sale'); // sản phẩm khuyến mãi 
+			});
+	//==================== HẾT CODE KHO HÀNG ==========================
 
 	});

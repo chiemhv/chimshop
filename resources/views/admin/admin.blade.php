@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Business Operations Center</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/admin/admin.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/admin/admin.css')}}">
 </head>
 <body>
 <div class="container">
@@ -51,6 +51,7 @@
 			</ul>
 			<label>KHO HÀNG</label>
 			<ul>
+			  <li><a href="{{URL::to('admin/fx')}}">FX</a></li>
 			  <li><a href="{{URL::to('admin/catalog')}}">Catalog</a></li>
 			  <li><a href="#">Producer</a></li>
 			  <li><a href="#">Product</a></li>
