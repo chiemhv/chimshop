@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\FX;
+use App\Fx;
 class FxCtrl extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class FxCtrl extends Controller
     public function index()
     {
         //
-        $data = FX::all();
+        $data = Fx::getAllorderByName();
         return view('admin.fx.index')->with('data', $data);
     }
 
@@ -26,6 +26,7 @@ class FxCtrl extends Controller
     public function create()
     {
         //
+        return view('admin.fx.create');
     }
 
     /**
@@ -37,6 +38,8 @@ class FxCtrl extends Controller
     public function store(Request $request)
     {
         //
+        Fx::insertGetId($request);
+        return redirect()->route('admin.fx');
     }
 
     /**
@@ -59,6 +62,9 @@ class FxCtrl extends Controller
     public function edit($id)
     {
         //
+      $db = Fx::getById($id);
+     //dd($data);
+      return view('admin.fx.edit')->with('db', $db);
     }
 
     /**
@@ -81,6 +87,8 @@ class FxCtrl extends Controller
      */
     public function destroy($id)
     {
-        //
+         $r = new Fx();
+        $r->destroyById($id);
+        return redirect()->route('admin.fx');
     }
 }

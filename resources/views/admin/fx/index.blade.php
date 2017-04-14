@@ -1,14 +1,14 @@
 @extends('admin.admin')
 @section('content_admin')
 <table class="table table-striped">
-	<tbody>
-		<tr>
-			<td><center>FX</center></td>
-		</tr>
-		<tr>
-			<td><a href="{{URL::to('admin/fx/create')}}" title=""><b>Tạo mới không gian Fx</b></a></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td><center>Danh sách FX</center></td>
+    </tr>
+    <tr>
+      <td><a href="{{URL::to('admin/fx/create')}}" title=""><b>Tạo mới FX </b></a></td>
+    </tr>
+  </tbody>
 </table>
 <table class="table table-striped">
     <thead>
@@ -23,11 +23,11 @@
     <tbody>
     @foreach($data as $row)
       <tr>
-        <td>{{$row->idCatalog}}</td>
+        <td>{{$row->idFx}}</td>
         <td>{{$row->name}}</td>
         <td>{{$row->detail}}</td>
-        <td><a href="" title="">Edit</a></td>
-        <td><a href="" title="">Delete</a></td>
+        <td><a href="{{asset('admin/fx/edit')}}/{{$row->idFx}}" title="">Edit</a></td>
+        <td><a href="{{asset('admin/fx/destroy')}}/{{$row->idFx}}" title="">Destroy</a></td>
       </tr>
       @endforeach
     </tbody>

@@ -1,0 +1,3 @@
+agaga
+<br>
+{{ $db['name'] }}

@@ -31,12 +31,12 @@ Route::group(['prefix'=>'admin'], function(){
 	//==================== KHO HÀNG ==========================
 			//-- TẠO FX -- TẦNG BÁN HÀNG, NHÓM BÁN HÀNG 
 			Route::group(['prefix'=>'fx'], function(){
-				Route::get('', 'FxCtrl@index');
+				Route::get('', 'FxCtrl@index')->name('admin.fx');
 				Route::get('create', 'FxCtrl@create');
 				Route::post('store', 'FxCtrl@store');
-				Route::get('edit', 'FxCtrl@edit');
+				Route::get('edit/{id}', 'FxCtrl@edit');
 				Route::post('update', 'FxCtrl@update');
-				Route::get('destroy', 'FxCtrl@destroy');
+				Route::get('destroy/{id}', 'FxCtrl@destroy');
 			});
 			//-- Tạo Catalog
 			Route::group(['prefix'=>'catalog'], function(){
@@ -45,7 +45,7 @@ Route::group(['prefix'=>'admin'], function(){
 			    Route::post('store', 'CatalogCtrl@store');
 			    Route::get('edit', 'CatalogCtrl@edit');
 			    Route::post('update', 'CatalogCtrl@update');
-			    Route::get('destroy', 'CatalogCtrl@destroy');
+			    Route::get('destroy/{id}', 'CatalogCtrl@destroy');
 			});
 			//--- NHÀ SẢN XUẤT PRODUCER
 			Route::group(['prefix'=>'producer'], function(){
@@ -69,3 +69,6 @@ Route::group(['prefix'=>'admin'], function(){
 	//==================== HẾT CODE KHO HÀNG ==========================
 
 	});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
